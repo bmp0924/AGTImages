@@ -10,9 +10,9 @@ $.getJSON('https://monitoringapi.solaredge.com/site/807090/envBenefits?systemUni
       var co2 = value.gasEmissionSaved.co2;
       var units = value.gasEmissionSaved.units;
 
+    trees = Math.round(trees * 100) / 10
     
     $('.trees').text(trees);
     $('.c02').text(co2 + ' '+ units+ 's');
-    // $('.output').append()
   });
 });
